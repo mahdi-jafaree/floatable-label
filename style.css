@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding: 20px ;
+}
+
+.container{
+    max-width: 720px;
+    margin: auto;
+}
+h2{
+    text-align: center;
+}
+.float-wrapper{
+    margin: auto;
+    width: fit-content;
+    margin-top: .8rem;
+    margin-bottom: .8rem;
+    position: relative;
+}
+.float-label{
+    color: #aaa;
+    pointer-events: none;
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    background-color: transparent;
+    transition: .2s ease-in all;
+    
+    
+}
+.float-input{
+    padding-left: 8px;
+    caret-color: transparent;
+    display: block;
+    color: #555;
+    outline: none;
+    border: .5px solid #ccc;
+    border-radius: 2px;
+    height: 2.2rem;
+    width: 100%;
+}
+.float-input:focus{
+    border: 1px solid #55f;
+    caret-color: #555;
+    outline: 3px solid rgb(204, 231, 241);
+}
+.float-input:not(:placeholder-shown) ~ .float-label,.float-input:focus ~ .float-label{
+    top:-.5rem;
+    background-color: white;
+    padding-left: 2px;
+    padding-right: 2px;
+}
